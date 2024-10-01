@@ -1,17 +1,14 @@
-def singleAlphabetCipher(msg, edge):
+def caesarCipher(msg, edge):
     l = len(msg)
     c_msg = []
     for i in range(0, edge):
         for j in range(i, l, edge):
-            print(j)
-            print(msg[j])
             c_msg.append(msg[j])
-    print(c_msg)
     string_c = ''
     for k in range(len(c_msg)):
         string_c += c_msg[k]
     print(string_c)
-singleAlphabetCipher("я знаю то, чего не знаешь ты", 3)
+
 
 def keyDecipherWithKey(msg, edge):
     l = len(msg)
@@ -61,6 +58,6 @@ def keyDecipherNoKey(msg):
             resStrings.append(j)
     print(resStrings)
 
-keyDecipherNoKey('ян ,е  аьы ат гнзе зюочоеншт')
+
 
 #TODO, если все строки содержат бан-слоги - то можно вывести строки с самым низким процентом бан-слогов
